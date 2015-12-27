@@ -26,10 +26,11 @@ switch (command) {
 
 
         //writing a new controller file
-        var content =   '//This is the init, MUST DECLARE ALL $SCOPE VARIABLES HERE\n\n\nvar name=\'yoni\';\n\n\n' +
-                        'function setName(newName) {\n\nname=newName}\n\n\n' +
-                        'function getName() {\n\nreturn name;}';
-        fs.writeFile('controllers/' + argv[3] + '.js',content);
+        var content =   'alert(\'ctrlName is working.\');\n\n\nvar name=\'ctrlName\';\n\n\n' +
+                        'function setName(newName) {\n\nname = newName;\n}\n\n\n' +
+                        'function getName() {\n\nreturn name;\n}';
+
+        saveFile(ctrlName + '.js',content,'controllers');
         /////////////////////////
     break;
 
@@ -41,25 +42,48 @@ switch (command) {
 
         var appName = process.argv[3];
         if (!appName){
-            console.log(calk.red('Missing parameter - name of module'));
+            console.log(chalk.red('Missing parameter - name of module'));
             process.exit(1);
         }
 
-        var controllers = fs.readDirSync('controllers/');
-        var file = 'var app = angular.module(\'' + appName + '\',[' + controllers.implode(',') + ']);\n';
+        var controllers = fs.readdirSync('controllers/');
+        var file = 'var app = angular.module(\'' + appName + '\',[' + controllers.join() + ']);\n';
 
 
         for (var i=0; i<controllers.length;i++){
 
             file += 'app.controller(' + controllers[i] + ',function($scope){\n\n';
 
-                file += fs.readFileSync('controllers/' + controller[i]);
+                file += fs.readFileSync('controllers/' + controllers[i]);
 
             file += '});\n\n\n';
         }
 
 
-        fs.writeFile(appName + '.js', file);
+        saveFile(appName + '.js',file,'compiled');
+
+
+
+        var htmlFile = '<html><head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script></head><body ng-app="' + appName + '">';
+
+        for (var i=0; i<controllers.length;i++){
+
+            htmlFile += '<div ng-controller="' + controllers[i] + '"></div>';
+        }
+
+        saveFile('index.html',htmlFile,'compiled');
 
     break;
+}
+
+
+
+function saveFile(fileName,data,directory) {
+
+        if (directory)
+            fileName = directory + '/' + fileName;
+
+        var writer = new fs.createWriteStream(fileName);
+        writer.write(new Buffer(data));
+        writer.end();
 }
