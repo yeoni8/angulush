@@ -1,10 +1,14 @@
 public name='test123';
 
+public namo = 'naaaame';
 
 public callout() {
  alert('Calling out from the ' + name + ' controller.');
 }
 
+public ff(){
+ alert('the second function');
+}
 
 //Init:
 

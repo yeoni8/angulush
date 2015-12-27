@@ -3,11 +3,15 @@ app.controller('test123',function($scope){
 
 $scope.name='test123';
 
+$scope.namo = 'naaaame';
 
 $scope.callout = function() {
  alert('Calling out from the ' + $scope.name + ' controller.');
 }
 
+$scope.ff = function(){
+ alert('the second function');
+}
 
 //Init:
 
