@@ -7,23 +7,32 @@
  */
 function parseController(controllerText){
 
+
+    var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
+    var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
+
     //private X will be renamed to $scope.__angulushPrivate.X
 
     //var varNameRegex = /public\s*([a-zA-Z\d]+)\s*=\s*([^;]+)\s*;\n/;  //public X = val;
 
 
     //Get the field
-    var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
-    var fieldName = varFieldRegex.exec(controllerText)[1];
-    controllerText = controllerText.replace(new RegExp(fieldName,'g'), '$scope.' + fieldName);
-    controllerText = controllerText.replace('public $scope.' + fieldName, '$scope.' + fieldName);
+
+    while(varFieldRegex.exec(controllerText)){
+        var fieldName = varFieldRegex.exec(controllerText)[1];
+        controllerText = controllerText.replace(new RegExp(fieldName,'g'), '$scope.' + fieldName);
+        controllerText = controllerText.replace('public $scope.' + fieldName, '$scope.' + fieldName);
+    }
+
 
 
     //Get the method
-    var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
-    var methodName = varMethodRegex.exec(controllerText)[1];
-    controllerText = controllerText.replace(new RegExp(methodName,'g'), '$scope.' + methodName);
-    controllerText = controllerText.replace('public $scope.' + methodName, '$scope.' + methodName + ' = function');
+
+    while (varMethodRegex.exec(controllerText)){
+        var methodName = varMethodRegex.exec(controllerText)[1];
+        controllerText = controllerText.replace(new RegExp(methodName,'g'), '$scope.' + methodName);
+        controllerText = controllerText.replace('public $scope.' + methodName, '$scope.' + methodName + ' = function');
+    }
 
 
 
