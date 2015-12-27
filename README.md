@@ -1,6 +1,6 @@
 
 
-<img src='https://github.com/yeoni8/angulush/blob/master/logo.png?raw=true' style='float:left; width:40px;'>
+<img src='https://github.com/yeoni8/angulush/blob/master/smalllogo.png?raw=true'>
 
 <h1>
 cool framework that compiles into angularjs!
