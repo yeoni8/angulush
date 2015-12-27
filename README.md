@@ -15,6 +15,7 @@ Usage: node angulush
 node angulush controller test123<br>    //create a new controller called test123<br><br>
 node angulush build appname123<br>      //build index.html and app.js, for an app using the controllers (all there is so far)<br><br>
 
+todo - add syntax for private and public methods and fields in controller files, they won't be js files anymore
 Youtube:<br>
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/XglAM685N0w/0.jpg)](http://www.youtube.com/watch?v=XglAM685N0w)
 
