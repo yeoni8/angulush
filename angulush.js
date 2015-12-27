@@ -7,9 +7,14 @@
  */
 function parseController(controllerText){
 
+    //each generation of controller gets a private key
+    var privateKey = '__angulushPrivates' + Math.floor(Math.random() * 10000).toString();
+
 
     var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
     var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
+    var privateFielddRegex = /private\s*([a-zA-Z\d]+)\s*=/;
+    var privateMethodRegex = /private\s+([a-zA-Z\d]+)\(/;
 
     //private X will be renamed to $scope.__angulushPrivate.X
 
@@ -24,6 +29,14 @@ function parseController(controllerText){
         controllerText = controllerText.replace('public $scope.' + fieldName, '$scope.' + fieldName);
     }
 
+    //Private fields
+
+    while(privateFielddRegex.exec(controllerText)){
+        var fieldName = privateFielddRegex.exec(controllerText)[1];
+        controllerText = controllerText.replace(new RegExp(fieldName,'g'), '$scope.' + privateKey + '.' + fieldName);
+        controllerText = controllerText.replace('private $scope.' + privateKey + '.' + fieldName, '$scope.' + privateKey + '.' + fieldName);
+    }
+
 
 
     //Get the method
@@ -33,6 +46,14 @@ function parseController(controllerText){
         controllerText = controllerText.replace(new RegExp(methodName,'g'), '$scope.' + methodName);
         controllerText = controllerText.replace('public $scope.' + methodName, '$scope.' + methodName + ' = function');
     }
+
+
+    while (privateMethodRegex.exec(controllerText)){
+        var methodName = privateMethodRegex.exec(controllerText)[1];
+        controllerText = controllerText.replace(new RegExp(methodName,'g'), '$scope.' + privateKey + '.' + methodName);
+        controllerText = controllerText.replace('private $scope.' + privateKey + '.' + methodName, '$scope.' + privateKey + '.' + methodName + ' = function');
+    }
+
 
 
 

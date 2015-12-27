@@ -3,13 +3,15 @@ app.controller('test123',function($scope){
 
 $scope.name='test123';
 
-$scope.namo = 'naaaame';
+$scope.__angulushPrivates4797.namo = 'naaaame';
+
+
 
 $scope.callout = function() {
  alert('Calling out from the ' + $scope.name + ' controller.');
 }
 
-$scope.ff = function(){
+$scope.__angulushPrivates4797.ff = function(){
  alert('the second function');
 }
 
@@ -17,6 +19,8 @@ $scope.ff = function(){
 
 
 $scope.callout();
+
+$scope.__angulushPrivates4797.ff();
 
 });
 

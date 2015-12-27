@@ -1,12 +1,14 @@
 public name='test123';
 
-public namo = 'naaaame';
+private namo = 'naaaame';
+
+
 
 public callout() {
  alert('Calling out from the ' + name + ' controller.');
 }
 
-public ff(){
+private ff(){
  alert('the second function');
 }
 
@@ -14,4 +16,8 @@ public ff(){
 
 
 callout();
+
+ff();
+
+
 
