@@ -1,9 +1,11 @@
 var app = angular.module('app',[]);
 app.controller('test123',function($scope){
 
+$scope.__angulushPrivates9392 = {};
+
 $scope.name='test123';
 
-$scope.__angulushPrivates4797.namo = 'naaaame';
+$scope.__angulushPrivates9392.namo = 'naaaame';
 
 
 
@@ -11,7 +13,7 @@ $scope.callout = function() {
  alert('Calling out from the ' + $scope.name + ' controller.');
 }
 
-$scope.__angulushPrivates4797.ff = function(){
+$scope.__angulushPrivates9392.ff = function(){
  alert('the second function');
 }
 
@@ -20,7 +22,9 @@ $scope.__angulushPrivates4797.ff = function(){
 
 $scope.callout();
 
-$scope.__angulushPrivates4797.ff();
+$scope.__angulushPrivates9392.ff();
+
+
 
 });
 

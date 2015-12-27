@@ -10,6 +10,8 @@ function parseController(controllerText){
     //each generation of controller gets a private key
     var privateKey = '__angulushPrivates' + Math.floor(Math.random() * 10000).toString();
 
+    controllerText = '$scope.' + privateKey + ' = {};\n\n' + controllerText;
+
 
     var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
     var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
