@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9bd7f51-556b-47e9-b5d9-adb55568d47b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angulush.js" afterPath="$PROJECT_DIR$/angulush.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiled/index.html" afterPath="$PROJECT_DIR$/compiled/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/test123.js" afterPath="$PROJECT_DIR$/controllers/test123.js" />
     </list>
     <ignored path="angularcompiler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,17 +31,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.40532959">
-              <caret line="17" column="141" selection-start-line="17" selection-start-column="141" selection-end-line="17" selection-end-column="141" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test123.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/test123.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -48,8 +41,10 @@
         <entry file="file://$PROJECT_DIR$/angulush.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-              <folding />
+              <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+              <folding>
+                <marker date="1451230310341" expanded="true" signature="1285:1308" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,7 +52,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compiled/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="95" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="95" />
               <folding />
             </state>
@@ -73,8 +68,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/compiled/app.js" />
-        <option value="$PROJECT_DIR$/angulush.js" />
         <option value="$PROJECT_DIR$/controllers/test123.js" />
+        <option value="$PROJECT_DIR$/angulush.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -199,7 +194,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -245,7 +240,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1451230310341" expanded="true" signature="1285:1308" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -269,7 +266,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1451230310341" expanded="true" signature="1285:1308" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -278,6 +277,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="95" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="95" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiled/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20675676">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <marker date="1451230459066" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -289,26 +298,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angulush.js">
+    <entry file="file://$PROJECT_DIR$/controllers/test123.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.2527027">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/test123.js">
+    <entry file="file://$PROJECT_DIR$/angulush.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding>
+            <marker date="1451230310341" expanded="true" signature="1285:1308" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40532959">
-          <caret line="17" column="141" selection-start-line="17" selection-start-column="141" selection-end-line="17" selection-end-column="141" />
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
         </state>
       </provider>
