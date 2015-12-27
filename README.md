@@ -14,9 +14,9 @@ Usage: node angulush
 
 
 
-node angulush controller test123<br>    //create a new controller called test123<br><br>
-node angulush directive test456<br>    //create a new directive called test456<br><br>
-node angulush build appname123<br>      //build index.html and appname123.js<br><br>
+<b>node angulush controller test123<b><br>    //create a new controller called test123<br><br>
+<b>node angulush directive test456<b><br>    //create a new directive called test456<br><br>
+<b>node angulush build appname123<b><br>      //build index.html and appname123.js<br><br>
 
 
 <br><br><br><br>
