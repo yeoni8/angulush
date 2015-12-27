@@ -1,0 +1,9 @@
+public name='test123';
+
+
+public alert() {
+
+alert(name);
+}
+
+

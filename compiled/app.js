@@ -1,22 +1,16 @@
 var app = angular.module('app',[]);
 app.controller('test123',function($scope){
 
-alert('The controller test123 is working.');
+$scope.name='test123';
 
 
-var name='test123';
+$scope.alert = function() {
 
-
-function setName(newName) {
-
-name = newName;
+alert($scope.name);
 }
 
 
-function getName() {
-
-return name;
-}});
+});
 
 
 app.directive('testooo',function(){

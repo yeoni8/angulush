@@ -1,3 +1,36 @@
+
+
+
+/**
+ * parse public X to $scpoe.X and changes all X to $scope.X
+ * @param controllerText
+ */
+function parseController(controllerText){
+
+    //private X will be renamed to $scope.__angulushPrivate.X
+
+    //var varNameRegex = /public\s*([a-zA-Z\d]+)\s*=\s*([^;]+)\s*;\n/;  //public X = val;
+
+
+    //Get the field
+    var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
+    var fieldName = varFieldRegex.exec(controllerText)[1];
+
+    controllerText = controllerText.replace(new RegExp(fieldName,'g'), '$scope.' + fieldName);
+    controllerText = controllerText.replace('public $scope.' + fieldName, '$scope.' + fieldName);
+
+
+    //Get the method
+    var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
+    var methodName = varMethodRegex.exec(controllerText)[1];
+    controllerText = controllerText.replace('public ' + methodName, '$scope.' + methodName + ' = function');
+
+
+
+    return controllerText;
+}
+
+
 var chalk = require('chalk');
 var fs = require('fs');
 
@@ -26,11 +59,10 @@ switch (command) {
 
 
         //writing a new controller file
-        var content =   'alert(\'The controller ' + ctrlName + ' is working.\');\n\n\nvar name=\'' + ctrlName + '\';\n\n\n' +
-                        'function setName(newName) {\n\nname = newName;\n}\n\n\n' +
-                        'function getName() {\n\nreturn name;\n}';
+        var content =   'public name=\'' + ctrlName + '\';\n\n\n' +
+                        'public alert() {\n\nalert(name);\n}\n\n\n';
 
-        saveFile(ctrlName + '.js',content,'controllers');
+        saveFile(ctrlName + '.lush',content,'controllers');
         /////////////////////////
     break;
 
@@ -73,9 +105,9 @@ switch (command) {
 
 
 
-            file += 'app.controller(\'' + controllers[i].slice(0,-3) + '\',function($scope){\n\n';
+            file += 'app.controller(\'' + controllers[i].slice(0,-5) + '\',function($scope){\n\n';
 
-            file += fs.readFileSync('controllers/' + controllers[i]);
+            file += parseController(fs.readFileSync('controllers/' + controllers[i]).toString());
 
 
 
@@ -104,7 +136,7 @@ switch (command) {
         var htmlFile = '<html><head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script><script src="' + appName + '.js"></script></head><body ng-app="' + appName + '">';
 
         for (var i=0; i<controllers.length;i++){
-            controllers[i] = controllers[i].slice(0,-3);
+            controllers[i] = controllers[i].slice(0,-5);
             htmlFile += '<div ng-controller="' + controllers[i] + '"></div>\n';
         }
 
