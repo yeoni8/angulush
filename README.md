@@ -10,6 +10,8 @@ Angulush - Compile into AngularJS
 Usage: node angulush
 </h2>
 
+<img src='https://github.com/yeoni8/angulush/blob/master/concept.png?raw=true'>
+
 
 
 node angulush controller test123<br>    //create a new controller called test123<br><br>
