@@ -144,7 +144,12 @@ switch (command) {
 
 
 
-        var htmlFile = '<html><head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script><script src="' + appName + '.js"></script></head><body ng-app="' + appName + '">';
+        var htmlFile =          '<html>\n\n ' +
+                                '<head>\n\n ' +
+                                '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>\n\n ' +
+                                '<script src="' + appName + '.js"></script>\n\n ' +
+                                '</head>\n\n ' +
+                                '<body ng-app="' + appName + '">\n\n ';
 
         for (var i=0; i<controllers.length;i++){
             controllers[i] = controllers[i].slice(0,-5);
@@ -156,7 +161,7 @@ switch (command) {
             htmlFile += '<' + directives[i] + '></' + directives[i] +'>\n';
         }
 
-        htmlFile += '</body></html>';
+        htmlFile += '</body>\n\n </html>';
         saveFile('index.html',htmlFile,'compiled');
 
     break;
