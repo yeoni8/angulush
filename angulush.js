@@ -13,7 +13,7 @@ switch (command) {
     case 'create:module':
     break;
 
-    case 'create:controller':
+    case 'controller':
 
 
         //name of the controller
@@ -40,6 +40,8 @@ switch (command) {
 
     case 'build':
 
+
+
         var appName = process.argv[3];
         if (!appName){
             console.log(chalk.red('Missing parameter - name of module'));
@@ -47,14 +49,20 @@ switch (command) {
         }
 
         var controllers = fs.readdirSync('controllers/');
-        var file = 'var app = angular.module(\'' + appName + '\',[' + controllers.join() + ']);\n';
+        var modules = [];
+        var file = 'var app = angular.module(\'' + appName + '\',[' + modules.join() + ']);\n';
+        
 
 
         for (var i=0; i<controllers.length;i++){
 
-            file += 'app.controller(' + controllers[i] + ',function($scope){\n\n';
 
-                file += fs.readFileSync('controllers/' + controllers[i]);
+
+            file += 'app.controller(\'' + controllers[i].slice(0,-3) + '\',function($scope){\n\n';
+
+            file += fs.readFileSync('controllers/' + controllers[i]);
+
+
 
             file += '});\n\n\n';
         }
@@ -64,16 +72,19 @@ switch (command) {
 
 
 
-        var htmlFile = '<html><head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script></head><body ng-app="' + appName + '">';
+        var htmlFile = '<html><head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script><script src="' + appName + '.js"></script></head><body ng-app="' + appName + '">';
 
         for (var i=0; i<controllers.length;i++){
-
+            controllers[i] = controllers[i].slice(0,-3);
             htmlFile += '<div ng-controller="' + controllers[i] + '"></div>';
         }
 
+        htmlFile += '</body></html>';
         saveFile('index.html',htmlFile,'compiled');
 
     break;
+    default:
+        console.log(chalk.red('unknown command'));
 }
 
 

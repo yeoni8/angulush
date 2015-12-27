@@ -1,15 +1,15 @@
-var app = angular.module('app',[mo.js]);
-app.controller(mo.js,function($scope){
+var app = angular.module('app',[]);
+app.controller('mo',function($scope){
 
-//This is the init, MUST DECLARE ALL $SCOPE VARIABLES HERE
+alert('ctrlName is working.');
 
 
-var name='yoni';
+var name='ctrlName';
 
 
 function setName(newName) {
 
-name=newName;
+name = newName;
 }
 
 
