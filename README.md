@@ -5,3 +5,8 @@
 <h1>
 cool framework that compiles into angularjs!
 </h1>
+
+
+usage:
+
+node angulush
