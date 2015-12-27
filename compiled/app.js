@@ -4,11 +4,15 @@ app.controller('test123',function($scope){
 $scope.name='test123';
 
 
-$scope.alert = function() {
-
-alert($scope.name);
+$scope.callout = function() {
+ alert('Calling out from the ' + $scope.name + ' controller.');
 }
 
+
+//Init:
+
+
+$scope.callout();
 
 });
 

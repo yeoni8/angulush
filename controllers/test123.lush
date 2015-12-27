@@ -1,9 +1,13 @@
 public name='test123';
 
 
-public alert() {
-
-alert(name);
+public callout() {
+ alert('Calling out from the ' + name + ' controller.');
 }
 
+
+//Init:
+
+
+callout();
 

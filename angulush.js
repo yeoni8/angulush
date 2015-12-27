@@ -15,7 +15,6 @@ function parseController(controllerText){
     //Get the field
     var varFieldRegex = /public\s*([a-zA-Z\d]+)\s*=/;
     var fieldName = varFieldRegex.exec(controllerText)[1];
-
     controllerText = controllerText.replace(new RegExp(fieldName,'g'), '$scope.' + fieldName);
     controllerText = controllerText.replace('public $scope.' + fieldName, '$scope.' + fieldName);
 
@@ -23,7 +22,8 @@ function parseController(controllerText){
     //Get the method
     var varMethodRegex = /public\s+([a-zA-Z\d]+)\(/;
     var methodName = varMethodRegex.exec(controllerText)[1];
-    controllerText = controllerText.replace('public ' + methodName, '$scope.' + methodName + ' = function');
+    controllerText = controllerText.replace(new RegExp(methodName,'g'), '$scope.' + methodName);
+    controllerText = controllerText.replace('public $scope.' + methodName, '$scope.' + methodName + ' = function');
 
 
 
@@ -60,7 +60,9 @@ switch (command) {
 
         //writing a new controller file
         var content =   'public name=\'' + ctrlName + '\';\n\n\n' +
-                        'public alert() {\n\nalert(name);\n}\n\n\n';
+                        'public callout() {\n alert(\'Calling out from the \' + name + \' controller.\');\n}\n\n\n' +
+                        '//Init:\n\n\n' +
+                        'callout();\n\n';
 
         saveFile(ctrlName + '.lush',content,'controllers');
         /////////////////////////
