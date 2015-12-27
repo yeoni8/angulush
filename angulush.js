@@ -26,7 +26,7 @@ switch (command) {
 
 
         //writing a new controller file
-        var content =   'alert(\'ctrlName is working.\');\n\n\nvar name=\'ctrlName\';\n\n\n' +
+        var content =   'alert(\'The controller ' + ctrlName + ' is working.\');\n\n\nvar name=\'ctrlName\';\n\n\n' +
                         'function setName(newName) {\n\nname = newName;\n}\n\n\n' +
                         'function getName() {\n\nreturn name;\n}';
 
@@ -51,7 +51,7 @@ switch (command) {
         var controllers = fs.readdirSync('controllers/');
         var modules = [];
         var file = 'var app = angular.module(\'' + appName + '\',[' + modules.join() + ']);\n';
-        
+
 
 
         for (var i=0; i<controllers.length;i++){
