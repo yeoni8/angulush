@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9bd7f51-556b-47e9-b5d9-adb55568d47b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angulush.js" afterPath="$PROJECT_DIR$/angulush.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiled/app.js" afterPath="$PROJECT_DIR$/compiled/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/test123.lush" afterPath="$PROJECT_DIR$/controllers/test123.lush" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a9bd7f51-556b-47e9-b5d9-adb55568d47b" name="Default" comment="" />
     <ignored path="angularcompiler.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angulush.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="angulush.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angulush.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6680731">
+            <state vertical-scroll-proportion="-16.37931">
               <caret line="62" column="101" selection-start-line="62" selection-start-column="101" selection-end-line="62" selection-end-column="101" />
               <folding>
                 <marker date="1451234523513" expanded="true" signature="2284:2307" placeholder="..." />
@@ -49,13 +44,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compiled/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5743243">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <marker date="1451234466811" expanded="true" signature="277:300" placeholder="..." />
+                <marker date="1451234528332" expanded="true" signature="321:344" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -330,21 +325,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compiled/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <marker date="1451234466811" expanded="true" signature="277:300" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compiled/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="95" selection-start-line="0" selection-start-column="89" selection-end-line="0" selection-end-column="95" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angulush.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.37931">
+          <caret line="62" column="101" selection-start-line="62" selection-start-column="101" selection-end-line="62" selection-end-column="101" />
+          <folding>
+            <marker date="1451234523513" expanded="true" signature="2284:2307" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -356,12 +351,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angulush.js">
+    <entry file="file://$PROJECT_DIR$/compiled/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6680731">
-          <caret line="62" column="101" selection-start-line="62" selection-start-column="101" selection-end-line="62" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.5743243">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1451234523513" expanded="true" signature="2284:2307" placeholder="..." />
+            <marker date="1451234528332" expanded="true" signature="321:344" placeholder="..." />
           </folding>
         </state>
       </provider>
