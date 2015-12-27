@@ -21,9 +21,15 @@ $scope.callout();
 });
 
 
+app.directive('testaaa',function(){
+
+return {
+restrict: 'E',template: '<div style="border: 1px solid black; width: 300px; margin: 10px; font-size: 20px;padding: 10px;">A testaaa directive</div>'};})
+
+
 app.directive('testooo',function(){
 
 return {
-restrict: 'E',template: '<div style="border: 1px solid black">testooo</div>'};})
+restrict: 'E',template: '<div style="border: 1px solid black; width: 300px; margin: 10px; font-size: 20px;padding: 10px;">A testooo directive</div>'};})
 
 

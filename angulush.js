@@ -88,7 +88,7 @@ switch (command) {
 
 
         //writing a new controller file
-        var content =   '<div style="border: 1px solid black">' + directiveName + '</div>';
+        var content =   '<div style="border: 1px solid black; width: 300px; margin: 10px; font-size: 20px;padding: 10px;">A ' + directiveName + ' directive</div>';
 
         saveFile(directiveName + '.html',content,'directives');
         /////////////////////////

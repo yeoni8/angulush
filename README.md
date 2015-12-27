@@ -11,6 +11,9 @@ Usage: node angulush
 </h2>
 
 <img src='https://github.com/yeoni8/angulush/blob/master/concept.png?raw=true'>
+<br><br>
+<img src='https://github.com/yeoni8/angulush/blob/master/concept2.png?raw=true'>
+
 
 
 
