@@ -7,7 +7,7 @@ Angulush - Compile into AngularJS
 </h1>
 
 <h2>
-Usage: node angulush
+Usage: $ node angulush
 </h2>
 
 <img src='https://github.com/yeoni8/angulush/blob/master/concept.png?raw=true'>
